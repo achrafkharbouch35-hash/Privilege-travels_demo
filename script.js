@@ -73,25 +73,207 @@ const TOURS = [
     included: ["Guide francophone", "Entrées aux sites principaux"],
     excluded: ["Déjeuner", "Transport depuis votre riad"]
   },
-  {
-    id: "merzouga",
-    name: "Merzouga & Sahara",
-    destination: "Dunes de l'Erg Chebbi",
-    category: "desert",
-    duration: "3 jours",
-    price: 1490,
-    rating: 5.0,
-    badge: "BEST SELLER",
-    image: "marzouga.jpg",
-    description: "Traversez l'Atlas, les gorges du Todra et les vallées du sud pour rejoindre les majestueuses dunes de Merzouga. Une nuit inoubliable sous les étoiles du Sahara.",
-    program: [
-      { time: "Jour 1", label: "Marrakech → Vallée du Dadès" },
-      { time: "Jour 2", label: "Gorges du Todra → Merzouga, coucher de soleil en dromadaire" },
-      { time: "Jour 3", label: "Lever de soleil sur les dunes → retour" }
+{
+  id: "merzouga",
+  name: "Merzouga & Sahara",
+  destination: "Dunes de l'Erg Chebbi",
+  category: "desert",
+  duration: "3 jours",
+  price: 779,
+  allInPrice: 979,
+  rating: 5.0,
+  badge: "BEST SELLER",
+  image: "PM.jpg",
+
+  description: `⚜️𝗠𝗘𝗥𝗭𝗢𝗨𝗚𝗔 𝗘𝗫𝗣𝗥𝗘𝗦𝗦⚜️
+
+Le voyage le plus demandé est de retour en mode SAFARI exclusivement chez Privilége Travel 🥰
+
+Ambiance, Détente et relaxation 100% Garantie 😍
+
+🏷️ Seulement 779 Dirhams
+En All In 979 Dirhams 🤩
+
+Pour plus d’informations et réservations, contactez-nous directement via WhatsApp ou appel téléphonique :
+
+📲 Allo Privilége : 0675296774`,
+
+  dates: [
+    "02-03-04 octobre 2026",
+    "09-10-11 octobre 2026",
+    "16-17-18 octobre 2026",
+    "23-24-25 octobre 2026",
+    "30-31 octobre - 01 novembre 2026",
+    "06-07-08 novembre 2026",
+    "13-14-15 novembre 2026",
+    "20-21-22 novembre 2026",
+    "27-28-29 novembre 2026",
+    "04-05-06 décembre 2026",
+    "11-12-13 décembre 2026",
+    "18-19-20 décembre 2026",
+    "25-26-27 décembre 2026",
+    "01-02-03 janvier 2027",
+    "08-09-10 janvier 2027",
+    "09-10-11 janvier 2027",
+    "15-16-17 janvier 2027",
+    "22-23-24 janvier 2027",
+    "29-30-31 janvier 2027"
+  ],
+
+  program: [
+    {
+      day: "Vendredi",
+      activities: [
+        "19h00 : Départ de Casablanca (Gare Casa-Voyageurs)",
+        "20h00 : Départ de Mohammedia devant l'école Majorelle",
+        "21h00 : Départ de Rabat (Gare Rabat Ville)",
+        "00h30 : Départ de Meknès (Gare Routière Sidi Saïd)",
+        "Pause dîner en route",
+        "Pause dans une aire de repos"
+      ]
+    },
+
+    {
+      day: "Samedi",
+      activities: [
+        "Pause à l'aire de repos de Midelt",
+        "07h30 : Arrivée à Ain Atti",
+        "Petit-déjeuner",
+        "Achats de cache-col, Melhfa et Derâa pour adopter le look sahraoui",
+        "Départ vers Merzouga",
+        "Arrivée au centre de Merzouga",
+        "Check-in à l'hôtel",
+        "Dispatching des chambres doubles, triples ou suites quadruples selon disponibilité",
+        "Temps libre pour se reposer",
+        "Détente et baignade à la piscine de l'hôtel",
+        "13h00 : Départ vers le village de Khamlia",
+        "Déjeuner à Dar Gnaoua",
+        "14h00 : Tour en Quad ou Buggy dans le désert de Merzouga (activité libre)",
+        "Départ vers les dunes de Merzouga en 4x4",
+        "Assister au coucher du soleil",
+        "Retour à l'hôtel à dos de dromadaire",
+        "Temps libre pour se reposer et prendre une douche",
+        "Dîner en buffet (Inclus)",
+        "Soirée animée avec DJ",
+        "Feux de camp en plein désert",
+        "Nuitée à l'hôtel"
+      ]
+    },
+
+    {
+      day: "Dimanche",
+      activities: [
+        "07h00 : Réveil en douceur",
+        "Petit-déjeuner en buffet à l'hôtel (Inclus)",
+        "08h15 : Check-out et départ vers Erfoud",
+        "09h30 : Arrivée à la ville d'Erfoud",
+        "Achat des dattes",
+        "10h30 : Arrivée à Ain Atti",
+        "Achat de lait de chamelle",
+        "11h00 : Pause à l'oasis Oulad Chaggar (paysage panoramique)",
+        "Voyage du retour",
+        "Déjeuner en route à Zaida (Libre)",
+        "Pause dans une aire de repos",
+        "Arrivée à Meknès",
+        "Arrivée à Rabat",
+        "Arrivée à Mohammedia",
+        "Arrivée à Casablanca"
+      ]
+    }
+  ],
+
+  activities: {
+    quad: [
+      "Quad : 350 DHS / 1 personne / 1H",
+      "Quad : 450 DHS / 2 personnes / 1H"
     ],
-    included: ["2 nuits en hébergement (hôtel + bivouac)", "Tous les transports", "Balade en dromadaire", "Petits-déjeuners et dîners"],
-    excluded: ["Déjeuners", "Boissons", "Dépenses personnelles"]
+    buggy: [
+      "Buggy : 900 DHS / 1 ou 2 personnes / 1H"
+    ],
+    adventure: [
+      "Excursion en 4x4 dans le désert",
+      "Coucher de soleil sur les dunes",
+      "Balade en dromadaire",
+      "Feux de camp",
+      "Soirée DJ ou Gnaoua"
+    ]
   },
+
+  lunchMenu: [
+    "Salade",
+    "Medfouna",
+    "Poulet",
+    "Thé",
+    "Fruit de saison"
+  ],
+
+  included: [
+    "Transport touristique climatisé A/R",
+    "Shooting photo professionnel et Story",
+    "Petit-déjeuner en buffet",
+    "Dîner du samedi en buffet",
+    "Soirée à l'hôtel avec DJ ou Gnaoua",
+    "Nuitée à l'hôtel",
+    "Feux de camp"
+  ],
+
+  allInIncluded: [
+    "Transport touristique climatisé A/R",
+    "Shooting photo professionnel et Story",
+    "Excursion en 4x4 dans le désert de Merzouga",
+    "Petit-déjeuner en buffet samedi et dimanche",
+    "Déjeuner du samedi",
+    "Dîner du samedi en buffet",
+    "Balade en dromadaire",
+    "Soirée à l'hôtel avec DJ ou Gnaoua",
+    "Nuitée à l'hôtel",
+    "Feux de camp"
+  ],
+
+  excluded: [
+    "Déjeuners pour l'offre standard",
+    "Boissons",
+    "Dépenses personnelles",
+    "Quad et Buggy"
+  ],
+
+  prices: {
+    standard: {
+      amount: 779,
+      label: "Prix Standard",
+      perPerson: true
+    },
+    allIn: {
+      amount: 979,
+      label: "Prix All In",
+      perPerson: true
+    }
+  },
+
+  reservation: {
+    advance: 300,
+    currency: "MAD",
+    method: "Versement bancaire",
+    contact: "0675296774",
+    instructions: "Contactez-nous via WhatsApp ou appel téléphonique pour demander le RIB."
+  },
+
+  contact: {
+    phone: "0675296774",
+    whatsapp: "0675296774",
+    label: "Allo Privilége"
+  },
+
+  information: [
+    "La réservation est ouverte selon les places disponibles.",
+    "Avant de faire le versement, vous devez contacter l'un de nos collaborateurs.",
+    "L'annulation se fait 48 heures avant le jour du voyage.",
+    "Nous ne sommes pas responsables si vous arrivez en retard.",
+    "Des changements peuvent survenir pour le bon déroulement du programme tout en assurant les services et activités compris.",
+    "Nous essayons toujours de vous offrir un service de bonne qualité.",
+    "Nous ne pouvons être tenus responsables en cas de force majeure ou de circonstances indépendantes de notre volonté."
+  ]
+},
   {
     id: "essaouira",
     name: "Essaouira",
