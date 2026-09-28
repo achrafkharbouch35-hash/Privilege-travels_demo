@@ -83,7 +83,7 @@ const TOURS = [
   allInPrice: 979,
   rating: 5.0,
   badge: "BEST SELLER",
-  image: "PM.jpg",
+  image: "PM.jpeg",
 
   description: `⚜️𝗠𝗘𝗥𝗭𝗢𝗨𝗚𝗔 𝗘𝗫𝗣𝗥𝗘𝗦𝗦⚜️
 
