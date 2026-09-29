@@ -83,121 +83,282 @@ const TOURS = [
   allInPrice: 979,
   rating: 5.0,
   badge: "BEST SELLER",
-  image: "PM.jpeg",
+  image: "PM.jpg",
 
   description: `⚜️𝗠𝗘𝗥𝗭𝗢𝗨𝗚𝗔 𝗘𝗫𝗣𝗥𝗘𝗦𝗦⚜️
 
-Le voyage le plus demandé est de retour en mode SAFARI exclusivement chez Privilége Travel 🥰
+Le voyage le plus demandé est de retour en mode SAFARI exclusivement chez Privilége travel 🥰
 
 Ambiance, Détente et relaxation 100% Garantie 😍
 
-🏷️ Seulement 779 Dirhams
-En All In 979 Dirhams 🤩
+🏷 Seulement 779 Dirhams
+En All insl 979 Dirhams 🤩
 
-Pour plus d’informations et réservations, contactez-nous directement via WhatsApp ou appel téléphonique :
+Pour plus d’informations et réservations, Contactez-nous directement via Whatsapp ou appel téléphonique :
 
-📲 Allo Privilége : 0675296774`,
+📲Allo privilége : 0675296774`,
+
+  // ============================================
+  // DATES DU VOYAGE
+  // ============================================
 
   dates: [
-    "02-03-04 octobre 2026",
-    "09-10-11 octobre 2026",
-    "16-17-18 octobre 2026",
-    "23-24-25 octobre 2026",
-    "30-31 octobre - 01 novembre 2026",
-    "06-07-08 novembre 2026",
-    "13-14-15 novembre 2026",
-    "20-21-22 novembre 2026",
-    "27-28-29 novembre 2026",
-    "04-05-06 décembre 2026",
-    "11-12-13 décembre 2026",
-    "18-19-20 décembre 2026",
-    "25-26-27 décembre 2026",
-    "01-02-03 janvier 2027",
-    "08-09-10 janvier 2027",
-    "09-10-11 janvier 2027",
-    "15-16-17 janvier 2027",
-    "22-23-24 janvier 2027",
-    "29-30-31 janvier 2027"
+    "02_03_04 octobre 2026",
+    "09_10_11 octobre 2026",
+    "16_17_18 octobre 2026",
+    "23_24_25 octobre 2026",
+    "30_31 octobre 01 novembre 2026",
+    "06_07_08 novembre 2026",
+    "13_14_15 novembre 2026",
+    "20_21_22 novembre 2026",
+    "27_28_29 novembre 2026",
+    "04_05_06 décembre 2026",
+    "11_12_13 décembre 2026",
+    "18_19_20 décembre 2026",
+    "25_26_27 décembre 2026",
+    "01_02_03 janvier 2027",
+    "08_09_10 janvier 2027",
+    "09_10_11 janvier 2027",
+    "15_16_17 janvier 2027",
+    "22_23_24 janvier 2027",
+    "29_30_31 janvier 2027"
   ],
 
+  // ============================================
+  // PROGRAMME COMPLET
+  // ============================================
+
   program: [
-    {
-      day: "Vendredi",
-      activities: [
-        "19h00 : Départ de Casablanca (Gare Casa-Voyageurs)",
-        "20h00 : Départ de Mohammedia devant l'école Majorelle",
-        "21h00 : Départ de Rabat (Gare Rabat Ville)",
-        "00h30 : Départ de Meknès (Gare Routière Sidi Saïd)",
-        "Pause dîner en route",
-        "Pause dans une aire de repos"
-      ]
-    },
+
+    // -------- VENDREDI --------
 
     {
-      day: "Samedi",
-      activities: [
-        "Pause à l'aire de repos de Midelt",
-        "07h30 : Arrivée à Ain Atti",
-        "Petit-déjeuner",
-        "Achats de cache-col, Melhfa et Derâa pour adopter le look sahraoui",
-        "Départ vers Merzouga",
-        "Arrivée au centre de Merzouga",
-        "Check-in à l'hôtel",
-        "Dispatching des chambres doubles, triples ou suites quadruples selon disponibilité",
-        "Temps libre pour se reposer",
-        "Détente et baignade à la piscine de l'hôtel",
-        "13h00 : Départ vers le village de Khamlia",
-        "Déjeuner à Dar Gnaoua",
-        "14h00 : Tour en Quad ou Buggy dans le désert de Merzouga (activité libre)",
-        "Départ vers les dunes de Merzouga en 4x4",
-        "Assister au coucher du soleil",
-        "Retour à l'hôtel à dos de dromadaire",
-        "Temps libre pour se reposer et prendre une douche",
-        "Dîner en buffet (Inclus)",
-        "Soirée animée avec DJ",
-        "Feux de camp en plein désert",
-        "Nuitée à l'hôtel"
-      ]
+      time: "VENDREDI",
+      label: "19h00 : Départ de Casablanca (Gare Casa-Voyageurs)."
+    },
+    {
+      time: "VENDREDI",
+      label: "20h00 : Départ de Mohammedia devant l'école Majorelle."
+    },
+    {
+      time: "VENDREDI",
+      label: "21h00 : Départ de Rabat (Gare Rabat Ville)."
+    },
+    {
+      time: "VENDREDI",
+      label: "00h30 : Départ de Meknès (Gare Routière Sidi Saïd)."
+    },
+    {
+      time: "VENDREDI",
+      label: "Pause dîner en route."
+    },
+    {
+      time: "VENDREDI",
+      label: "Pause dans une aire de repos."
     },
 
+    // -------- SAMEDI --------
+
     {
-      day: "Dimanche",
-      activities: [
-        "07h00 : Réveil en douceur",
-        "Petit-déjeuner en buffet à l'hôtel (Inclus)",
-        "08h15 : Check-out et départ vers Erfoud",
-        "09h30 : Arrivée à la ville d'Erfoud",
-        "Achat des dattes",
-        "10h30 : Arrivée à Ain Atti",
-        "Achat de lait de chamelle",
-        "11h00 : Pause à l'oasis Oulad Chaggar (paysage panoramique)",
-        "Voyage du retour",
-        "Déjeuner en route à Zaida (Libre)",
-        "Pause dans une aire de repos",
-        "Arrivée à Meknès",
-        "Arrivée à Rabat",
-        "Arrivée à Mohammedia",
-        "Arrivée à Casablanca"
-      ]
+      time: "SAMEDI",
+      label: "Pause à l'aire de repos Midelt."
+    },
+    {
+      time: "SAMEDI",
+      label: "07h30 : Arrivée à Ain Atti."
+    },
+    {
+      time: "SAMEDI",
+      label: "Petit-déjeuner."
+    },
+    {
+      time: "SAMEDI",
+      label: "Achats des cache-col, Melhfa et Derâa et prendre le look Sahraouis (prix raisonnable)."
+    },
+    {
+      time: "SAMEDI",
+      label: "Départ vers Merzouga."
+    },
+    {
+      time: "SAMEDI",
+      label: "Arrivée au centre de Merzouga."
+    },
+    {
+      time: "SAMEDI",
+      label: "Check-in à l'hôtel."
+    },
+    {
+      time: "SAMEDI",
+      label: "Dispatching des chambres doubles, triples ou suites quadruplés selon disponibilité."
+    },
+    {
+      time: "SAMEDI",
+      label: "Temps libre pour se reposer."
+    },
+    {
+      time: "SAMEDI",
+      label: "Détente et baignade à la piscine de l'hôtel."
+    },
+    {
+      time: "SAMEDI",
+      label: "13h00 : Départ vers le village Khamliya."
+    },
+    {
+      time: "SAMEDI",
+      label: "Déjeuner à Dar Gnaoua."
+    },
+    {
+      time: "SAMEDI",
+      label: "Au menu : Salade + Medfouna + Poulet + Thé + Fruit de saison."
+    },
+    {
+      time: "SAMEDI",
+      label: "14h00 : Profitez de 1H de tour en Quad ou Buggy dans le désert de Merzouga. (Libre)"
+    },
+    {
+      time: "SAMEDI",
+      label: "Quad : 350 DHS / 1 personne / 1H."
+    },
+    {
+      time: "SAMEDI",
+      label: "Quad : 450 DHS / 2 personnes / 1H."
+    },
+    {
+      time: "SAMEDI",
+      label: "Buggy : 900 DHS / 1 ou 2 personnes / 1H."
+    },
+    {
+      time: "SAMEDI",
+      label: "LET THE ADVENTURE BEGINS 🤩"
+    },
+    {
+      time: "SAMEDI",
+      label: "Départ vers les dunes de MERZOUGA en 4x4."
+    },
+    {
+      time: "SAMEDI",
+      label: "Assister au coucher du soleil."
+    },
+    {
+      time: "SAMEDI",
+      label: "Retour à l'hôtel à dos des dromadaires."
+    },
+    {
+      time: "SAMEDI",
+      label: "Temps libre pour se reposer et prendre une douche."
+    },
+    {
+      time: "SAMEDI",
+      label: "Dîner en buffet. (Inclus)"
+    },
+    {
+      time: "SAMEDI",
+      label: "Soirée animée avec DJ."
+    },
+    {
+      time: "SAMEDI",
+      label: "Feux de camp en plein désert."
+    },
+    {
+      time: "SAMEDI",
+      label: "Nuitée à l'hôtel."
+    },
+
+    // -------- DIMANCHE --------
+
+    {
+      time: "DIMANCHE",
+      label: "07h00 : Réveil en douceur."
+    },
+    {
+      time: "DIMANCHE",
+      label: "Petit-déjeuner en buffet à l'hôtel. (Inclus)"
+    },
+    {
+      time: "DIMANCHE",
+      label: "08h15 : Check-out et départ vers Arfoud."
+    },
+    {
+      time: "DIMANCHE",
+      label: "09h30 : Arrivée à la ville d'Arfoud."
+    },
+    {
+      time: "DIMANCHE",
+      label: "Achat des dattes."
+    },
+    {
+      time: "DIMANCHE",
+      label: "10h30 : Arrivée à Ain Atti."
+    },
+    {
+      time: "DIMANCHE",
+      label: "Achat de lait des dromadaires."
+    },
+    {
+      time: "DIMANCHE",
+      label: "11h00 : Pause à l'oasis Oulad Chaggar (paysage panoramique)."
+    },
+    {
+      time: "DIMANCHE",
+      label: "Voyage du retour."
+    },
+    {
+      time: "DIMANCHE",
+      label: "Déjeuner en route à Zaida. (Libre)"
+    },
+    {
+      time: "DIMANCHE",
+      label: "Pause dans une aire de repos en route."
+    },
+    {
+      time: "DIMANCHE",
+      label: "Arrivée à Meknès."
+    },
+    {
+      time: "DIMANCHE",
+      label: "Arrivée à Rabat."
+    },
+    {
+      time: "DIMANCHE",
+      label: "Arrivée à Mohammedia."
+    },
+    {
+      time: "DIMANCHE",
+      label: "Arrivée à Casablanca."
     }
   ],
 
+  // ============================================
+  // ACTIVITÉS OPTIONNELLES
+  // ============================================
+
   activities: {
-    quad: [
-      "Quad : 350 DHS / 1 personne / 1H",
-      "Quad : 450 DHS / 2 personnes / 1H"
-    ],
-    buggy: [
-      "Buggy : 900 DHS / 1 ou 2 personnes / 1H"
-    ],
-    adventure: [
-      "Excursion en 4x4 dans le désert",
-      "Coucher de soleil sur les dunes",
+    quad: {
+      title: "Quad",
+      options: [
+        "350 DHS / 1 personne / 1H",
+        "450 DHS / 2 personnes / 1H"
+      ]
+    },
+
+    buggy: {
+      title: "Buggy",
+      options: [
+        "900 DHS / 1 ou 2 personnes / 1H"
+      ]
+    },
+
+    desert: [
+      "Excursion en 4x4 dans le désert de Merzouga",
+      "Coucher du soleil sur les dunes",
       "Balade en dromadaire",
-      "Feux de camp",
-      "Soirée DJ ou Gnaoua"
+      "Feux de camp en plein désert"
     ]
   },
+
+  // ============================================
+  // MENU DU DÉJEUNER
+  // ============================================
 
   lunchMenu: [
     "Salade",
@@ -207,28 +368,60 @@ Pour plus d’informations et réservations, contactez-nous directement via What
     "Fruit de saison"
   ],
 
+  // ============================================
+  // PRIX
+  // ============================================
+
+  prices: {
+    standard: {
+      amount: 779,
+      currency: "DH",
+      label: "Prix Standard",
+      perPerson: true
+    },
+
+    allIn: {
+      amount: 979,
+      currency: "DH",
+      label: "Prix All In",
+      perPerson: true
+    }
+  },
+
+  // ============================================
+  // OFFRE À 779 DH
+  // ============================================
+
   included: [
     "Transport touristique climatisé A/R",
     "Shooting photo professionnel et Story",
-    "Petit-déjeuner en buffet",
-    "Dîner du samedi en buffet",
-    "Soirée à l'hôtel avec DJ ou Gnaoua",
+    "Petit-déjeuner en buffet. (Dimanche)",
+    "Dîner du samedi en buffet. (Samedi)",
+    "Soirée à l'hôtel DJ ou Gnaoua",
     "Nuitée à l'hôtel",
     "Feux de camp"
   ],
+
+  // ============================================
+  // OFFRE ALL IN À 979 DH
+  // ============================================
 
   allInIncluded: [
     "Transport touristique climatisé A/R",
     "Shooting photo professionnel et Story",
     "Excursion en 4x4 dans le désert de Merzouga",
-    "Petit-déjeuner en buffet samedi et dimanche",
-    "Déjeuner du samedi",
-    "Dîner du samedi en buffet",
-    "Balade en dromadaire",
-    "Soirée à l'hôtel avec DJ ou Gnaoua",
+    "Petit-déjeuner en buffet. (Samedi & Dimanche)",
+    "Déjeuner (Samedi)",
+    "Dîner du samedi en buffet (Samedi)",
+    "Balade en Dromadaire",
+    "Soirée à l'hôtel DJ ou Gnaoua",
     "Nuitée à l'hôtel",
     "Feux de camp"
   ],
+
+  // ============================================
+  // CE QUI N'EST PAS INCLUS
+  // ============================================
 
   excluded: [
     "Déjeuners pour l'offre standard",
@@ -237,41 +430,40 @@ Pour plus d’informations et réservations, contactez-nous directement via What
     "Quad et Buggy"
   ],
 
-  prices: {
-    standard: {
-      amount: 779,
-      label: "Prix Standard",
-      perPerson: true
-    },
-    allIn: {
-      amount: 979,
-      label: "Prix All In",
-      perPerson: true
-    }
-  },
+  // ============================================
+  // RÉSERVATION
+  // ============================================
 
   reservation: {
     advance: 300,
-    currency: "MAD",
+    currency: "DH",
     method: "Versement bancaire",
-    contact: "0675296774",
-    instructions: "Contactez-nous via WhatsApp ou appel téléphonique pour demander le RIB."
+    message: "La réservation se fait par versement bancaire d'une avance de 300 Dirhams.",
+    instructions: "Contactez-nous sur l'un de nos numéros pour demander le RIB via WhatsApp ou en appel téléphonique."
   },
 
+  // ============================================
+  // CONTACT
+  // ============================================
+
   contact: {
+    name: "Allo privilége",
     phone: "0675296774",
-    whatsapp: "0675296774",
-    label: "Allo Privilége"
+    whatsapp: "0675296774"
   },
+
+  // ============================================
+  // INFORMATIONS COMPLÉMENTAIRES
+  // ============================================
 
   information: [
     "La réservation est ouverte selon les places disponibles.",
-    "Avant de faire le versement, vous devez contacter l'un de nos collaborateurs.",
+    "Avant de faire le versement vous devez contacter l'un de nos collaborateurs.",
     "L'annulation se fait 48 heures avant le jour du voyage.",
     "Nous ne sommes pas responsables si vous arrivez en retard.",
-    "Des changements peuvent survenir pour le bon déroulement du programme tout en assurant les services et activités compris.",
+    "Des changements peuvent survenir pour le bon déroulement du programme tout en assurant les services et activités comprises.",
     "Nous essayons toujours de vous offrir un service de bonne qualité.",
-    "Nous ne pouvons être tenus responsables en cas de force majeure ou de circonstances indépendantes de notre volonté."
+    "Nous ne pouvons être tenus responsables en cas de force majeure ou de circonstances qui ne dépendent pas de notre volonté."
   ]
 },
   {
