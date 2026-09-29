@@ -797,59 +797,92 @@ function initFaq(){
 
 /* ---------- TOUR DETAILS MODAL ---------- */
 function openTourModal(id){
-  const tour = TOURS.find(t=>t.id===id);
+  const tour = TOURS.find(t => t.id === id);
   if(!tour) return;
+
   activeTour = tour;
   bookingQty = 2;
 
   document.getElementById("tmImage").src = tour.image;
   document.getElementById("tmImage").alt = tour.name;
   document.getElementById("tmBadge").textContent = tour.badge;
-  document.getElementById("tmBadge").className = "tour-badge " + (tour.badge === "NOUVEAU" ? "new" : "");
+  document.getElementById("tmBadge").className =
+    "tour-badge " + (tour.badge === "NOUVEAU" ? "new" : "");
+
   document.getElementById("tmDestination").textContent = tour.destination;
   document.getElementById("tmTitle").textContent = tour.name;
   document.getElementById("tmDuration").textContent = tour.duration;
-  document.getElementById("tmRating").textContent = "★ " + tour.rating.toFixed(1);
+  document.getElementById("tmRating").textContent =
+    "★ " + tour.rating.toFixed(1);
+
   document.getElementById("tmDesc").textContent = tour.description;
   document.getElementById("tmPrice").textContent = formatPrice(tour.price);
   document.getElementById("tmQtyValue").textContent = bookingQty;
 
-  document.getElementById("tmProgram").innerHTML = tour.program.map(p=>`
-    <li><span class="time">${p.time}</span><span>${p.label}</span></li>
-  `).join("");
-  document.getElementById("tmIncluded").innerHTML = tour.included.map(i=>`<li>${i}</li>`).join("");
-  document.getElementById("tmExcluded").innerHTML = tour.excluded.map(i=>`<li>${i}</li>`).join("");
+  /* ---------- PROGRAMME ---------- */
 
-  document.getElementById("tmWhatsapp").href = buildWhatsappLink(tourWhatsappMessage(tour));
+  if (tour.program && tour.program.length) {
+
+    // Nouveau format : day + activities
+    if (tour.program[0].day && tour.program[0].activities) {
+
+      document.getElementById("tmProgram").innerHTML =
+        tour.program.map(day => `
+          <li class="program-day">
+            <div class="program-day-title">
+              ${day.day}
+            </div>
+
+            <div class="program-day-activities">
+              ${day.activities.map(activity => `
+                <div class="program-activity">
+                  <span class="program-bullet">•</span>
+                  <span>${activity}</span>
+                </div>
+              `).join("")}
+            </div>
+          </li>
+        `).join("");
+
+    } else {
+
+      // Ancien format : time + label
+      document.getElementById("tmProgram").innerHTML =
+        tour.program.map(p => `
+          <li>
+            <span class="time">${p.time}</span>
+            <span>${p.label}</span>
+          </li>
+        `).join("");
+    }
+
+  } else {
+    document.getElementById("tmProgram").innerHTML = "";
+  }
+
+  /* ---------- INCLUS ---------- */
+
+  document.getElementById("tmIncluded").innerHTML =
+    (tour.included || [])
+      .map(item => `<li>${item}</li>`)
+      .join("");
+
+  /* ---------- NON INCLUS ---------- */
+
+  document.getElementById("tmExcluded").innerHTML =
+    (tour.excluded || [])
+      .map(item => `<li>${item}</li>`)
+      .join("");
+
+  /* ---------- WHATSAPP ---------- */
+
+  document.getElementById("tmWhatsapp").href =
+    buildWhatsappLink(tourWhatsappMessage(tour));
+
+  /* ---------- OUVRIR MODAL ---------- */
 
   document.getElementById("tourModalBackdrop").classList.add("open");
   document.body.style.overflow = "hidden";
-}
-
-function closeTourModal(){
-  document.getElementById("tourModalBackdrop").classList.remove("open");
-  document.body.style.overflow = "";
-}
-
-function initTourModal(){
-  document.getElementById("tourModalClose").addEventListener("click", closeTourModal);
-  document.getElementById("tourModalBackdrop").addEventListener("click",(e)=>{
-    if(e.target.id === "tourModalBackdrop") closeTourModal();
-  });
-
-  document.getElementById("tmQtyMinus").addEventListener("click", ()=>{
-    if(bookingQty > 1) bookingQty--;
-    document.getElementById("tmQtyValue").textContent = bookingQty;
-  });
-  document.getElementById("tmQtyPlus").addEventListener("click", ()=>{
-    bookingQty++;
-    document.getElementById("tmQtyValue").textContent = bookingQty;
-  });
-
-  document.getElementById("tmBookBtn").addEventListener("click", ()=>{
-    closeTourModal();
-    openBookingModal(activeTour);
-  });
 }
 
 /* ---------- BOOKING MODAL ---------- */
