@@ -843,3 +843,46 @@ input,select,textarea{font-family:inherit;}
   padding-bottom: 10px;
 }
 }
+/* ================================
+   PROGRAMME DÉTAILLÉ
+================================ */
+
+.tm-program .program-day {
+  display: block;
+  margin-bottom: 22px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.tm-program .program-day:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.program-day-title {
+  font-family: "Manrope", sans-serif;
+  font-weight: 800;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 10px;
+}
+
+.program-day-activities {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.program-activity {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.program-bullet {
+  flex-shrink: 0;
+  font-weight: 800;
+}
